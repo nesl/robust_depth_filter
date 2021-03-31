@@ -16,9 +16,11 @@ depth_filter_class my_filt;
 float arr[3];
 int main()
 {
-    // Initialise the digital pin LED1 as an output
-    
-    my_filt.d_filt(10.2, 0.0, 2.3, 23.5, 34.7, 2.5, 0.3, 0.2, 0.2, arr);
+    while(1)
+    {
+        my_filt.d_filt(10.2, 0.0, 2.3, 23.5, 34.7, 2.5, 0.3, 0.2, 0.2, arr);
+        printf("%f",arr[2]);
+    }
 }
 ```
 
