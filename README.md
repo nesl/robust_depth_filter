@@ -5,4 +5,21 @@ Can be used in embedded devices in real-time. Example sensor includes MS5837-30B
 
 Code is also available at: https://os.mbed.com/users/swapnilsayansaha/code/depth_filter/ 
 
+Example cpp code:
+```
+#include "mbed.h"
+#include "platform/mbed_thread.h"
+#include "depth_filter.h"
+
+depth_filter_class my_filt;
+
+float arr[3];
+int main()
+{
+    // Initialise the digital pin LED1 as an output
+    
+    my_filt.d_filt(10.2, 0.0, 2.3, 23.5, 34.7, 2.5, 0.3, 0.2, 0.2, arr);
+}
+```
+
 ![Device_Image](153681669.webp)
